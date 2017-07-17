@@ -14,6 +14,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules')); // when a
 
 app.use('/api/v1', restRouter);
 
+// due to using AWS ElasticBeanstalk
 var port = process.env.PORT || 3000;
 
 http.listen(port, function(){
