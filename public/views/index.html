@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <title>LOLA</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300" rel="stylesheet" type="text/css">
+
+    <!-- static css file -->
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
+
+    <!-- Angular-Chart.js -->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <!-- Angular config -->
+    <script src="/public/js/app.js"></script>
+    <script src="/public/js/controllers/homeController.js"></script>
+    <script src="/public/js/controllers/summonerController.js"></script>
+
+    <!-- Typed.js -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/public/js/lib/typed.js"></script>
+
+    <style>
+        .panel-primary>.panel-heading {
+            color: #fff;
+            background-color: #53b2e5;
+            border-color: #53b2e5;
+        }
+    </style>
+</head>
+
+<body ng-app="lolaApp">
+
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/#/">
+                            <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> <span style="font-size: 110%">LOLA</span> <span class="open-sans-font" style="font-size: 85%">&nbsp;&nbsp;CS-GY 9223: Programming for Big Data Analytics</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+
+</body>
+</html>

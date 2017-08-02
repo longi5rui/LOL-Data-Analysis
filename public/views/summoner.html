@@ -1,0 +1,120 @@
+<div class="row" id="welcome">
+    <div class="col-md-12">
+	  <h3 class="open-sans-font" style="color: #fff"><span class="glyphicon glyphicon-heart-empty"></span> {{ playerName }}, here are your top 3 master champions:</h3>
+	</div>
+</div>
+
+<!-- 1st row -->
+<div class="row open-sans-font" style="margin-top: 2%">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="./public/images/{{ champion0Id }}.jpg" alt="./public/images/alt.gif">
+      <div class="caption">
+        <h3 class="top-champion">1<sup>st</sup> Master Champion</h3>
+        <p><i>{{ champion0Title }}</i></p>
+
+        <table class="table">
+			<tbody>     
+			  <tr class="success">
+			    <td>Champion Name</td>
+			    <td>{{ champion0Name }}</td>
+			  </tr>
+			  <tr class="danger">
+			    <td>Champion Level</td>
+			    <td>{{ champion0Level }}</td>
+			  </tr>
+			  <tr class="info">
+			    <td>Champion Points</td>
+			    <td>{{ champion0Points }}</td>
+			  </tr>
+			  <tr class="warning">
+			    <td>Champion Tags</td>
+			    <td>{{ champion0Tags }}</td>
+			  </tr>
+			</tbody>
+		</table>
+
+        <p><a href="http://gameinfo.na.leagueoflegends.com/en/game-info/champions/{{ champion0Key }}" target="_blank" class="btn btn-primary" role="button">Let's see more</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="./public/images/{{ champion1Id }}.jpg" alt="./public/images/alt.gif">
+      <div class="caption">
+        <h3 class="top-champion">2<sup>nd</sup> Master Champion</h3>
+        <p><i>{{ champion1Title }}</i></p>
+
+        <table class="table">
+			<tbody>     
+			  <tr class="success">
+			    <td>Champion Name</td>
+			    <td>{{ champion1Name }}</td>
+			  </tr>
+			  <tr class="danger">
+			    <td>Champion Level</td>
+			    <td>{{ champion1Level }}</td>
+			  </tr>
+			  <tr class="info">
+			    <td>Champion Points</td>
+			    <td>{{ champion1Points }}</td>
+			  </tr>
+			  <tr class="warning">
+			    <td>Champion Tags</td>
+			    <td>{{ champion1Tags }}</td>
+			  </tr>
+			</tbody>
+		</table>
+
+        <p><a href="http://gameinfo.na.leagueoflegends.com/en/game-info/champions/{{ champion1Key }}" target="_blank" class="btn btn-primary" role="button">Let's see more</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="./public/images/{{ champion2Id }}.jpg" alt="./public/images/alt.gif">
+      <div class="caption">
+        <h3 class="top-champion">3<sup>rd</sup> Master Champion</h3>
+        <p><i>{{ champion2Title }}</i></p>
+
+        <table class="table">
+			<tbody>     
+			  <tr class="success">
+			    <td>Champion Name</td>
+			    <td>{{ champion2Name }}</td>
+			  </tr>
+			  <tr class="danger">
+			    <td>Champion Level</td>
+			    <td>{{ champion2Level }}</td>
+			  </tr>
+			  <tr class="info">
+			    <td>Champion Points</td>
+			    <td>{{ champion2Points }}</td>
+			  </tr>
+			  <tr class="warning">
+			    <td>Champion Tags</td>
+			    <td>{{ champion2Tags }}</td>
+			  </tr>
+			</tbody>
+		</table>
+
+        <p><a href="http://gameinfo.na.leagueoflegends.com/en/game-info/champions/{{ champion2Key }}" target="_blank" class="btn btn-primary" role="button">Let's see more</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2nd row -->
+<div class="row" style="margin-top: 15px">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Distribution of your champion points on different roles</div>
+            <h1 class="panel-body">
+                <canvas id="radar" class="chart chart-radar" chart-data="roleData" chart-labels="roleLabels" chart-colors="colors" chart-options="radarChartOptions" chart-legend="true">
+                </canvas> 
+            </h1>
+        </div>
+    </div>
+</div>

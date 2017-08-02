@@ -1,0 +1,26 @@
+{
+  "name": "lola",
+  "version": "1.0.0",
+  "description": "LOLA - a project to visualize and analyze different champion’s win rate and multiple factors influencing game result in League of Legends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longi5rui/LOL-Data-Analysis.git"
+  },
+  "author": "Rui Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/longi5rui/LOL-Data-Analysis/issues"
+  },
+  "homepage": "https://github.com/longi5rui/LOL-Data-Analysis#readme",
+  "dependencies": {
+    "angular-chart.js": "^1.0.3",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "leaguejs": "^1.3.1",
+    "request": "^2.79.0"
+  }
+}

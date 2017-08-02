@@ -1,0 +1,206 @@
+<div class="row" id="intro-sentence">
+    <div class="col-md-12">
+        <center class="open-sans-font intro-main"><span id="sentence1"></span><span id="sentence2"></span></center>
+    </div>
+</div>
+
+<div class="row" id="intro-sentence-assist">
+    <div class="col-md-12">
+        <center class="open-sans-font intro-assist"><span id="sentence3"></span><span id="sentence4"></span></center>
+    </div>
+</div>
+
+<div class="row" id="lookup">
+	<div class="col-md-12">
+		<form ng-submit="submit()">
+            <div class="form-group" align="center">
+                <input type="text" class="form-control" ng-model="summonerName" id="name-bar" placeholder="Summoner name in NA server..."></input>
+                <button type="submit" class="btn btn-nice" id="name-btn">Find my data <span class="glyphicon glyphicon-chevron-right"></span></input>
+            </div>
+        </form>
+	</div>
+</div>
+
+<!-- 1st row -->
+<div class="row" style="margin-top: 3%">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Different factor's influence on match result</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="factorOptions" chart-dataset-override="datasetOverride" chart-data="factorData" chart-labels="factorLabels" chart-colors="colors" chart-series="resultSeries" chart-legend="true">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Dragon / Baron Kill's influence on match result</div>
+            <h1 class="panel-body">
+                <canvas id="base" class="chart-horizontal-bar" chart-options="baseChartOptions" chart-dataset-override="datasetOverride" chart-data="dragonData" chart-labels="dragonLabels" chart-colors="colors" chart-series="resultSeries" chart-legend="true">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- 2nd row -->
+<div class="row" style="margin-top: 15px">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Blue Team vs. Purple Team</div>
+            <h1 class="panel-body">
+                <canvas id="pie" class="chart chart-pie" chart-data="blueVsPurpleData" chart-labels="blueVsPurpleLabels" chart-dataset-override="pieleftOverride" chart-colors="blueVsPurpleColors" chart-legend="true" chart-options="pieChartOptions">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Ranked Matches Tier Distribution</div>
+            <h1 class="panel-body">
+                <canvas id="doughnut" class="chart chart-doughnut" chart-data="doughnutData" chart-labels="doughnutLabels" chart-dataset-override="datasetOverride" chart-colors="colors" chart-legend="true" chart-options="pieChartOptions">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- 3rd row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 highest win rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="hWinRateOptions" chart-dataset-override="leftOverride" chart-data="highWinRateData" chart-labels="highWinRateLabels" chart-colors="leftColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 lowest win rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="lWinRateOptions" chart-dataset-override="rightOverride" chart-data="lowWinRateData" chart-labels="lowWinRateLabels" chart-colors="rightColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- 4th row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 highest pick rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="leftOverride" chart-data="highPickRateData" chart-labels="highPickRateLabels" chart-colors="leftColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 lowest pick rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="rightOverride" chart-data="lowPickRateData" chart-labels="lowPickRateLabels" chart-colors="rightColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- 5th row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 highest ban rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="leftOverride" chart-data="highBanRateData" chart-labels="highBanRateLabels" chart-colors="leftColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 lowest ban rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="rightOverride" chart-data="lowBanRateData" chart-labels="lowBanRateLabels" chart-colors="rightColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- 6th row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 highest first blood rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="fbOptions" chart-dataset-override="leftOverride" chart-data="highFbRateData" chart-labels="highFbRateLabels" chart-colors="leftColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 lowest first blood rate champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="rightOverride" chart-data="lowFbRateData" chart-labels="lowFbRateLabels" chart-colors="rightColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- 7th row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 highest kills amount champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="hKillOptions" chart-dataset-override="leftOverride" chart-data="highKillData" chart-labels="highKillLabels" chart-colors="leftColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 lowest kills amount champions</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="rightOverride" chart-data="lowKillData" chart-labels="lowKillLabels" chart-colors="rightColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- 8th row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 highest Quadra Kills amount champions (70,000 matches)</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="leftOverride" chart-data="highQuadraData" chart-labels="highQuadraLabels" chart-colors="leftColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading open-sans-font">Top 8 highest Penta Kills amount champions (70,000 matches)</div>
+            <h1 class="panel-body">
+                <canvas id="bar" class="chart chart-bar" chart-options="barChartOptions" chart-dataset-override="rightOverride" chart-data="highPentaData" chart-labels="highPentaLabels" chart-colors="rightColors">
+                </canvas>
+            </h1>
+        </div>
+    </div>
+</div>
