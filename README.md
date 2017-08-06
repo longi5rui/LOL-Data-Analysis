@@ -6,8 +6,6 @@ Factors such as player skill, game character choice, game strategy and pace all 
 
 ## 2. Design
 
-![](file:///Users/jrui/Desktop/Screen%20Shot%202017-08-11%20at%2000.50.21.png)
-
 #### Design Explanation
 
 - **Data Collection:** Node.js scripts deployed on a EC2 instance will keep collecting fresh game matches data by calling LOL APIs, do the simple data cleansing and store them to the AWS ElasticSearch server.
